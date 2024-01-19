@@ -31,8 +31,11 @@ function page() {
             </div>
     </div>
       </div>
-      <section className='h-[100vh]' id='homepage'>
+      <div id='homepage'>
+
         <NavbarPort2 />
+      </div>
+      <section className='h-[100vh]' >
         <Hero />
       </section>
       <section className='h-[100%]' id='about'> <About /></section>

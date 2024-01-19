@@ -7,7 +7,7 @@ function NavbarPort2() {
 
 
   return (
-   <div className='h-[100px] flex justify-center items-center'>
+   <div className='h-[60px] md:h-[100px] flex justify-center items-center'>
           <div>
               <Sidebar/>
           </div>  
@@ -17,7 +17,7 @@ function NavbarPort2() {
                 transition={{duration:.1}}
               className='max-w-[1066px]  w-full m-auto flex justify-between items-center'>
               
-          <div className=" w-full text-center lg:text-start text-orange-400 font-mono text-2xl italic">
+          <div className=" w-full text-center lg:text-start text-orange-400 font-mono text-xl lg:text-2xl italic">
               TayoDev
           </div>
         <div className="flex justify-center items-center gap-2">

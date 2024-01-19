@@ -45,9 +45,9 @@ function About() {
       
         <>
             {/* mobile */}
-           <div   className=' text-slate-300 p-6 bg-mycolor m-auto block md:hidden border'>
+           <div   className='text-slate-300 p-6 bg-mycolor m-auto block md:hidden border'>
           <div >
-                <h1  className=' font-bold hover:text-orange-400 border-b my-2 md:my-4 text-xl md:text-3xl text-center capitalize'>who I am</h1>  
+                <h1  className=' font-bold hover:text-orange-400 border-b my-2 md:my-4 text-xl md:text-3xl text-center capitalize'>About</h1>  
               <p  className=' my-2 md:my-4 tracking-wider md:leading-7 text-center'>
                     I am a highly skilled full-stack developer with a passion for creating efficient and user-friendly web applications. I transitioned from management field and I have worked on numerous portfolio projects some of which are in the portfolio section,
                     My expertise lies in both front-end and back-end development, allowing me to seamlessly integrate various technologies and deliver robust solutions.

@@ -42,11 +42,11 @@ function Hero() {
       {/* mobile view */}
 
 
-     <div className=' block md:hidden'>
-      <div className=' h-[calc(100%-50px)] overflow-hidden relative w-full flex flex-col justify-between'>
+     <div className=' block md:hidden '>
+      <div className='h-[100%] overflow-hidden relative w-full flex flex-col justify-between'>
       
       <div className='h-full w-full relative flex-1  overflow-hidden'>
-          <div className=' stroke-orange-400 fixed -z-10 right-32  m-auto w-[250px] h-[250px]'>
+          <div className=' stroke-orange-400 fixed -z-10 left-10 w-[220px] h-[220px]'>
         <svg fill="#000000" viewBox="0 0 512 512" enable-background="new 0 0 512 512" id="computer_x5F_desk_1_" version="1.1" xmlns="http://www.w3.org/2000/svg" ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="computer_x5F_desk">
           <motion.path
               initial={{pathLength:0}}
@@ -81,11 +81,11 @@ function Hero() {
       </div>
       </div>
                   
-           <div className='h-[100%] m-auto flex-1 mt-[260px] mb-4'>
+           <div className='m-auto flex-1 mt-[220px] mb-4'>
         
             <motion.div variants={textVariants} initial='initial' animate='animate' className='flex h-[100%] w-[60%] m-auto  flex-col gap-4 justify-center items-center'>
-                  <motion.h1 variants={textVariants} className='text-3xl f font-serif lg:text-4xl text-blue-300 font-bold tracking-widest'>Tayo Titiloye</motion.h1>
-                  <motion.h2 variants={textVariants} className='text-4xl lg:text-5xl font-bold'>Web developer and UI designer</motion.h2>
+                  <motion.h1 variants={textVariants} className='text-3xl font-serif lg:text-4xl text-blue-300 font-medium tracking-wide'>Tayo Titiloye</motion.h1>
+                  <motion.h2 variants={textVariants} className='text-3xl tracking-tighter text-justify lg:text-5xl font-medium'>Web developer and UI designer</motion.h2>
                   <motion.div variants={textVariants} className=' '>
                 <Link href={`#portfolio`} className=''>
 
@@ -115,7 +115,7 @@ function Hero() {
   <div className=' hidden md:block'>
 
     
-    <div className=' h-[calc(100%-100px)] overflow-hidden relative w-full flex justify-between'>
+    <div className=' h-[100%] overflow-hidden relative w-full flex justify-between'>
        {/* <motion.div variants={slideVariants} initial="initial" animate="animate" className=' absolute textv text-violet-950 text-[300px] whitespace-nowrap'>writer content-creator influencer</motion.div> */}
       <div className='h-[100%] m-auto lg:max-w-[1066px] flex-1'>
         
