@@ -49,7 +49,7 @@ function Contact() {
       
       <motion.div  ref={viewRef} variants={variants} initial='initial' animate='animate' className='flex flex-col md:flex-row lg:w-[1066px] h-[100vh] lg:h-screen justify-center items-center m-auto gap-2'>
           <motion.div variants={variants} className='flex-1 flex flex-col text-center md:text-left gap-6'>
-              <motion.h1 variants={variants} className='text-3xl md:text-6xl font-bold'>Let's work together</motion.h1>
+              <motion.h1 variants={variants} className='text-3xl md:text-6xl font-bold'>Let&apos;s work together</motion.h1>
               <motion.div variants={variants}>
                   <h2 className=' text-xl font-bold capitalize'>mails</h2>
                   <span className=' text-slate-400' >tayotitidev@gmail.com</span>
