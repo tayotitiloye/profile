@@ -30,8 +30,8 @@ function Sidebar() {
     
   return (
       <motion.div className='flex flex-col items-center justify-center text-black' animate={open ? 'open' : 'closed'}>
-          <motion.div className='fixed top-0 bottom-0 left-0 z-50 w-[400px] bg-white' variants={variants}><LinkBtn /></motion.div>
-          <ToggleBtn setOpen={ setOpen} />
+          <motion.div className='fixed top-0 bottom-0 left-0 z-50 w-[400px] bg-white' variants={variants}><LinkBtn setOpen={ setOpen} /></motion.div>
+          <ToggleBtn setOpen={ setOpen} open={open} />
     </motion.div>
   )
 }

@@ -17,15 +17,7 @@ const textVariants = {
       staggerChildren:.1
     }
   },
-scrollVariant : {
-    y: 10,
-    opacity: 0,
-    transition: {
-      duration:2,
-      repeat:Infinity
-  
-  }
-}
+
 
 }
 
@@ -87,21 +79,20 @@ function Hero() {
 
             d="M281.979,407.2h63.127c2.563,0,4.647-2.085,4.647-4.647v-11.816c0-2.563-2.085-4.646-4.647-4.646h-63.127 c-2.562,0-4.647,2.084-4.647,4.646v11.816C277.332,405.115,279.418,407.2,281.979,407.2z M284.533,393.289h58.021V400h-58.021 V393.289z"></motion.path> <rect height="7.199" width="16.2" x="107.691" y="290.916"></rect> <rect height="7.2" width="16.2" x="107.691" y="400"></rect> </g> </g></svg>
       </div>
-      {/* <Image src={'/images/image-product-4.jpg'} className='object-cover mx-auto' alt='image' width={500} height={500} /> */}
       </div>
                   
            <div className='h-[100%] m-auto flex-1 mt-[260px] mb-4'>
         
             <motion.div variants={textVariants} initial='initial' animate='animate' className='flex h-[100%] w-[60%] m-auto  flex-col gap-4 justify-center items-center'>
-                  <motion.h1 variants={textVariants} className='text-3xl f font-serif md:text-4xl text-blue-300 font-bold tracking-widest'>Tayo Titiloye</motion.h1>
-                  <motion.h2 variants={textVariants} className='text-4xl md:text-5xl font-bold'>Web developer and UI designer</motion.h2>
+                  <motion.h1 variants={textVariants} className='text-3xl f font-serif lg:text-4xl text-blue-300 font-bold tracking-widest'>Tayo Titiloye</motion.h1>
+                  <motion.h2 variants={textVariants} className='text-4xl lg:text-5xl font-bold'>Web developer and UI designer</motion.h2>
                   <motion.div variants={textVariants} className=' '>
-                <Link href={`port2#portfolio`} className=''>
+                <Link href={`#portfolio`} className=''>
 
 
-                  <motion.button variants={textVariants} className='border p-2 rounded-md mr-2'>see the latest work</motion.button>
+                  <motion.button variants={textVariants} className='border p-2 rounded-md m-2'>see the latest work</motion.button>
                 </Link>
-                <Link href={`port2#contact`} className=' text-transparent'>
+                <Link href={`#contact`} className=' text-transparent'>
 
                  
                 <motion.button variants={textVariants} className='border p-2 rounded-md bg-white text-black'>contact me</motion.button>
@@ -126,25 +117,24 @@ function Hero() {
     
     <div className=' h-[calc(100%-100px)] overflow-hidden relative w-full flex justify-between'>
        {/* <motion.div variants={slideVariants} initial="initial" animate="animate" className=' absolute textv text-violet-950 text-[300px] whitespace-nowrap'>writer content-creator influencer</motion.div> */}
-      <div className='h-[100%] m-auto max-w-[1066px] flex-1'>
+      <div className='h-[100%] m-auto lg:max-w-[1066px] flex-1'>
         
             <motion.div variants={textVariants} initial='initial' animate='animate' className='flex h-[100%] w-[60%] m-auto  flex-col gap-4 justify-center items-center'>
                   <motion.h1 variants={textVariants} className='text-3xl f font-serif md:text-4xl text-blue-300 font-bold tracking-widest'>Tayo Titiloye</motion.h1>
                   <motion.h2 variants={textVariants} className='text-4xl md:text-5xl font-bold'>Web developer and UI designer</motion.h2>
                   <motion.div variants={textVariants} className=' '>
-                <Link href={`port2#portfolio`} className=''>
+                <Link href={`#portfolio`} className=''>
                   
 
                       <motion.button variants={textVariants} className='border p-2 rounded-md mr-2 capitalize'>see my latest work</motion.button>
                 </Link>
-                <Link href={`port2#contact`} className=' '>
+                <Link href={`#contact`} className=' '>
                 
                   <motion.button variants={textVariants} className='border p-2 rounded-md bg-white text-black capitalize'>contact me</motion.button>
                 </Link>
             </motion.div>
             <motion.div variants={textVariants} animate='scrollVariant'>
 
-                {/* <Image  src={'/images/image-product-4.jpg'} width={40} height={40} className='object-cover' alt='image' /> */}
             </motion.div>
            </motion.div>
        
@@ -183,7 +173,6 @@ function Hero() {
 
             d="M281.979,407.2h63.127c2.563,0,4.647-2.085,4.647-4.647v-11.816c0-2.563-2.085-4.646-4.647-4.646h-63.127 c-2.562,0-4.647,2.084-4.647,4.646v11.816C277.332,405.115,279.418,407.2,281.979,407.2z M284.533,393.289h58.021V400h-58.021 V393.289z"></motion.path> <rect height="7.199" width="16.2" x="107.691" y="290.916"></rect> <rect height="7.2" width="16.2" x="107.691" y="400"></rect> </g> </g></svg>
       </div>
-      {/* <Image src={'/images/image-product-4.jpg'} className='object-cover mx-auto' alt='image' width={500} height={500} /> */}
       </div>
                   
       </div>

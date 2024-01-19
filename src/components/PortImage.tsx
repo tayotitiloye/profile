@@ -1,5 +1,4 @@
 'use client'
-import { crewImage, ecommerce, explore } from '@/data'
 import React, { useState } from 'react'
 import Image from 'next/image'
 

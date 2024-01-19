@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React, { useState } from 'react'
 import {motion} from 'framer-motion'
 import PortImage from '../PortImage';
-import { portfolio, testing } from '@/data';
+import { portfolio } from '@/data';
 
 interface Portfolio {
   id: number;
@@ -14,32 +14,6 @@ interface Portfolio {
     image: string;
   }
 }[];
-
-
-
-
-
-function Portfolio2() {
-
-    const [data, setData] = useState(portfolio)
-
-  return (
-      <div className='pt-[60px] md:m-auto md:pt-[100px] lg:max-w-[1066px] bg-mycolor h-[100vh]'>
-          <h1 className='font-bold text-3xl md:text-4xl lg:text-5xl text-center p-2 w-full'>
-            Portfolio Projects
-          </h1>
-          <div className=' flex flex-col md:flex-row md:h-full justify-center items-center'>
-              {/* {project.map(p=>(<SingleProject project={project})) />} */}
-              {data.map(p => (
-                  <SingleProject project={p} key={p.id}/>
-              ))}
-          </div>
-      </div>
-  )
-}
-
-export default Portfolio2
-
 
 type PropsPort = {
   id: number;
@@ -62,8 +36,9 @@ const slideLeft = {
         opacity: 1,
         x: 0,
         transition: {
-            duration: 1,
-            staggerChildren: 1,
+            duration: .8,
+            type:'spring',
+            staggerChildren: .5,
             staggerDirection:1
 
         }
@@ -88,18 +63,46 @@ const slideRight = {
 
 const mobileVariant = {
     initial: {
-        opacity:0,
-        x: 300
+        opacity: 0,
+        x:-50
     },
     animate: {
         opacity: 1,
         x: 0,
         transition: {
-           duartion: 3
-            
+            duration: 1,
+            staggerChildren: 1,
+            staggerDirection:1
+
         }
     }
 }
+
+
+
+
+
+function Portfolio2() {
+
+    const [data, setData] = useState(portfolio)
+
+  return (
+      <div className='pt-[60px] md:m-auto md:pt-[100px] lg:max-w-[1066px] bg-mycolor h-[100vh]'>
+          <h1 className='font-bold text-3xl md:text-4xl lg:text-5xl text-center p-2 w-full'>
+            Portfolio Projects
+          </h1>
+          <div className=' flex flex-col md:flex-row md:h-full justify-center items-center'>
+              {data.map(p => (
+                  <SingleProject project={p} key={p.id}/>
+              ))}
+          </div>
+      </div>
+  )
+}
+
+export default Portfolio2
+
+
 
 
 function SingleProject({ project }: PropsPort2) {
@@ -109,29 +112,29 @@ function SingleProject({ project }: PropsPort2) {
     return (
         <>
             {/* mobile view */}
-         <a href={project.link} target='_blank' className='cursor-pointer'>
+         <motion.a variants={mobileVariant} initial='initial' whileInView='animate' href={project.link} target='_blank' className='cursor-pointer'>
 
-            <div className=' block md:hidden bg-mycolor '>
-                 <div className='flex flex-col md:flex-row gap-3 md:gap-4 m-auto p-3 md:p-4 lg:p-5'>
-                    <div className='relative flex-1 mx-auto w-full h-full group cursor-pointer'>
+            <motion.div variants={mobileVariant} className=' block md:hidden bg-mycolor '>
+                 <motion.div className='flex flex-col md:flex-row gap-3 md:gap-4 m-auto p-3 md:p-4 lg:p-5'>
+                    <motion.div variants={mobileVariant} className='relative flex-1 mx-auto w-full h-full group cursor-pointer'>
                      
                       <Image className=' m-auto rounded-lg' src={ project.coverImage} width={250} height={250} alt='image' />
                        
-                    </div>
-                    <div  className='flex-1 m-auto p-2 w-[300px] h-full'>
-                            <h2  className=' text-xl md:text-xl lg:text-3xl font-bold'>{project.title}</h2>
+                    </motion.div>
+                    <motion.div variants={mobileVariant} className='flex-1 m-auto p-2 w-[300px] h-full'>
+                            <motion.h2 variants={mobileVariant} className=' text-xl md:text-xl lg:text-3xl font-bold'>{project.title}</motion.h2>
                      
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
    
-            </div>
-        </a>
+            </motion.div>
+        </motion.a>
             
             {/* tablet and desktop */}
             <div className=' hidden md:block'>
 
                 <motion.div variants={slideLeft} initial='initial' whileInView='animate' className='flex flex-col gap-3 md:gap-4 m-auto p-3 md:p-4 lg:p-5'>
-                    {/* {portfolio.map(p => ( */}
+                   
                         <motion.div variants={slideLeft}  className='relative group flex-1 w-full h-full'>
                         
                             <Image className=' m-auto rounded-lg' src={project.coverImage} width={400} height={400} alt='image' />
@@ -176,25 +179,9 @@ function SingleProject({ project }: PropsPort2) {
 
                             </p>
                         </motion.div>
-                    {/* ))} */}
-                    {/* <motion.div variants={slideLeft} initial='initial' whileInView='animate' className='relative group flex-1 mx-auto w-full h-full'>
-                          <Image className=' m-auto rounded-lg' src={ project.img} width={300} height={300} alt='image' />
-                            <div className=' grid place-items-center font-bold  text-lg absolute -bottom-10 bg-black/50 w-full h-full opacity-0 group-hover:opacity-100 group-hover:bottom-0 transition-all duration-300'>
-                                { project.title}
-                            <div className=''>
-                                     <span className='cursor-pointer mx-2' onClick={()=>setOpen(true)}>+</span>    <span className='cursor-pointer'>link</span>
-                                </div>
-                            </div>
-                    </motion.div>
-                    <motion.div variants={slideRight} initial='initial' whileInView='animate' className='flex-1 m-auto  mx-6 p-4 w-full h-full '>
-                            <motion.h2 variants={slideRight} className=' text-xl md:text-2xl lg:text-3xl font-bold'>{project.title}</motion.h2>
-                            <motion.p variants={slideRight} className='p-2'>{project.desc }</motion.p>
-                    </motion.div> */}
-                </motion.div>
+                   </motion.div>
                 {open && <PortImage data={project} close={setOpen} />}
-                {/* {portfolio.map(p => (
-                    <PortImage portfolio={portfolio} key={p.id} close={setOpen} />
-                ))} */}
+               
         </div>
         </>
     )

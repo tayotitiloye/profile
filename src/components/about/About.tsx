@@ -16,8 +16,26 @@ const slideLeft = {
           staggerChildren: .1,
             type: 'spring'
             
-           // staggerDirection:-1
-        }
+         }
+    }
+    
+}
+const slideLeftMobil = {
+    initial: {
+        x: - 50,
+        y: 30,
+        opacity:0
+    },
+    animate: {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 1,
+          staggerChildren: .1,
+            type: 'spring'
+            
+         }
     }
     
 }
@@ -27,7 +45,7 @@ function About() {
       
         <>
             {/* mobile */}
-            <div   className=' text-slate-300 p-6 bg-mycolor m-auto block md:hidden border'>
+           <div   className=' text-slate-300 p-6 bg-mycolor m-auto block md:hidden border'>
           <div >
                 <h1  className=' font-bold hover:text-orange-400 border-b my-2 md:my-4 text-xl md:text-3xl text-center capitalize'>who i am</h1>  
               <p  className=' my-2 md:my-4 tracking-wider md:leading-7 text-center'>
@@ -62,12 +80,15 @@ function About() {
           </div>
           
             </div>
-            
+             
+        
+        
+      
             {/* tablet and desktop */}
       
-          <motion.div variants={slideLeft} initial='initial' whileInView='animate'  className='h-[100vh] text-slate-300 p-6 md:w-[1066px] bg-mycolor m-auto hidden md:block'> 
+          <motion.div variants={slideLeft} initial='initial' whileInView='animate'  className='h-[100vh] text-slate-300 p-6 lg:w-[1066px] bg-mycolor m-auto hidden md:block'> 
                 <motion.h1 variants={slideLeft} className=' font-bold hover:text-orange-400 border-b my-2 md:my-4 text-xl md:text-3xl text-center capitalize'>About</motion.h1>  
-              <motion.p variants={slideLeft} className=' my-2 md:my-4 tracking-wider md:leading-7 text-center'>
+              <motion.p variants={slideLeft} className=' my-2 md:my-4 tracking-wider lg:leading-7 text-center'>
                     I am a highly skilled full-stack developer with a passion for creating efficient and user-friendly web applications. I transitioned from management field, so I bring the problem solving skills I've acquired over the years to bear on technology while working on projects. I have worked on numerous portfolio projects some of which are in the portfolio section.
                     My expertise lies in both front-end and back-end development, allowing me to seamlessly integrate various technologies and deliver robust solutions.
                     I am a quick learner, adaptable to new technologies, and always strive to stay up-to-date with the latest industry trends.
