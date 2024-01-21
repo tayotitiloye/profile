@@ -2,7 +2,8 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
-import { toast } from 'react-toastify';
+import toast from "react-hot-toast";
+
 
 
 const variants = {
@@ -26,20 +27,19 @@ function Contact() {
     const inView = useInView(viewRef, {margin:'-100px'} )
     const formRef = useRef<any>();
     
-    const sendEmail = (e:React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
+    const sendEmail = () => {
+   
     emailjs.sendForm('service_a1md7nb', 'template_8ulx15t', formRef.current, '1OwN3WVlk-IAwh3x-')
       .then((result) => {
           console.log(result.text);
     
+          
      toast.success('email sent, thanks for reaching out')
         }, (error) => {
             console.log(error.text);
         });
         
     
-        
     };
     
 
@@ -51,7 +51,7 @@ function Contact() {
           <motion.div variants={variants} className='flex-1 flex flex-col text-center md:text-left gap-6'>
               <motion.h1 variants={variants} className='text-3xl md:text-6xl font-bold'>Let&apos;s work together</motion.h1>
               <motion.div variants={variants}>
-                  <h2 className=' text-xl font-bold capitalize'>mails</h2>
+                  <h2 className=' text-xl font-bold capitalize'>mail</h2>
                   <span className=' text-slate-400' >tayotitidev@gmail.com</span>
               </motion.div>
               <motion.div variants={variants}>
@@ -92,9 +92,9 @@ function Contact() {
                  </motion.div>
               
               {/* mobile */}
-              <div className='block md:hidden'>
+              {/* <div className='block md:hidden'> */}
                   
-              <motion.form
+              {/* <motion.form
                    initial={{ opacity: 0 }}
                    whileInView={{ opacity: 1 }}
                      transition={{ delay: 1, duration: 1 }}
@@ -102,18 +102,23 @@ function Contact() {
                       
                       onSubmit={sendEmail}
                       
-                     
-                   
-                   className='flex flex-col gap-2 w-full z-50 mb-5 pb-5'>
-                  <input type="text" required placeholder='Name' className='p-2 border rounded-md bg-transparent' name='user_name'/>
+                  className='flex flex-col gap-2 w-full z-50 mb-5 pb-5'>
+                        <input  type="text" required placeholder='Name' className='p-2 border rounded-md bg-transparent' name='user_name'/>
+                        <input  type="email" required placeholder='Email' className='p-2 border rounded-md bg-transparent' name='user_email'/>
+                        <textarea  rows={5} placeholder='message' className='p-2 border rounded-md bg-transparent' name='message'/>
+                       <button type='submit' className=' bg-orange-400 rounded-md p-2'>Submit</button>                                
+                 */}
+                
+                        {/* <input type="text" required placeholder='Name' className='p-2 border rounded-md bg-transparent' name='user_name' />
                   <input type="email" required placeholder='Email' className='p-2 border rounded-md bg-transparent' name='user_email'/>
                   <textarea rows={7} placeholder='message' className='p-2 border rounded-md bg-transparent' name='message'/>
-                    <button type='submit' className=' bg-orange-400 rounded-md p-2'>Submit</button>                  
-              </motion.form>
-                </div>
+                    <button type='submit' className=' bg-orange-400 rounded-md p-2'>Submit</button>                   */}
+              {/* </motion.form> */}
+                {/* </div> */}
              
               {/* tablet and desktop */}
-              <div className='hidden md:block mr-10 lg:mr-0 z-[1000]'>
+              {/* <div className='hidden md:block mr-10 lg:mr-0 z-[1000]'> */}
+              <div className=' z-[1000]'>
                   
                     <motion.form
                         initial={{ opacity: 0 }}
