@@ -1,6 +1,6 @@
 'use client'
 import { motion, useInView } from 'framer-motion'
-import { useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 import toast from "react-hot-toast";
 
@@ -27,8 +27,8 @@ function Contact() {
     const inView = useInView(viewRef, {margin:'-100px'} )
     const formRef = useRef<any>();
     
-    const sendEmail = () => {
-   
+    const sendEmail = (e:React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
     emailjs.sendForm('service_a1md7nb', 'template_8ulx15t', formRef.current, '1OwN3WVlk-IAwh3x-')
       .then((result) => {
           console.log(result.text);
