@@ -48,7 +48,7 @@ function Contact() {
     return (
       
       <motion.div  ref={viewRef} variants={variants} initial='initial' animate='animate' className='flex flex-col md:flex-row lg:w-[1066px] h-[100vh] lg:h-screen justify-center items-center m-auto gap-2'>
-          <motion.div variants={variants} className='flex-1 flex flex-col text-center md:text-left gap-6'>
+          <motion.div variants={variants} className='flex-1 flex flex-col text-center md:text-left gap-2 md:gap-4 lg:gap-6 mb-10'>
               <motion.h1 variants={variants} className='text-3xl md:text-6xl font-bold'>Let&apos;s work together</motion.h1>
               <motion.div variants={variants}>
                   <h2 className=' text-xl font-bold capitalize'>mail</h2>
@@ -127,7 +127,7 @@ function Contact() {
                       ref={formRef}
                       onSubmit={sendEmail}
                         
-                        className='flex flex-col gap-3 w-full z-50'>
+                        className='flex flex-col gap-3 w-full z-50 pb-10 mb-10'>
                         <input  type="text" required placeholder='Name' className='p-2 border rounded-md bg-transparent' name='user_name'/>
                         <input  type="email" required placeholder='Email' className='p-2 border rounded-md bg-transparent' name='user_email'/>
                         <textarea  rows={7} placeholder='message' className='p-2 border rounded-md bg-transparent' name='message'/>

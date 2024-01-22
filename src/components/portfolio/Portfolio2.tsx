@@ -89,7 +89,7 @@ function Portfolio2() {
   return (
       <div className='pt-[60px] md:m-auto md:pt-[100px] lg:max-w-[1066px] bg-mycolor h-[100vh]'>
           <h1 className='font-bold text-3xl md:text-4xl lg:text-5xl text-center p-2 w-full'>
-            Portfolio Projects
+            My Works
           </h1>
           <div className=' flex flex-col md:flex-row md:h-full justify-center items-center'>
               {data.map(p => (

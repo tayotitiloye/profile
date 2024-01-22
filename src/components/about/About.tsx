@@ -47,13 +47,17 @@ function About() {
             {/* mobile */}
            <div   className='text-slate-300 p-6 bg-mycolor m-auto block md:hidden border'>
           <div >
-                <h1  className=' font-bold hover:text-orange-400 border-b my-2 md:my-4 text-xl md:text-3xl text-center capitalize'>About</h1>  
-              <p  className=' my-2 md:my-4 tracking-wider md:leading-7 text-center'>
-                    I am a highly skilled full-stack developer with a passion for creating efficient and user-friendly web applications. I transitioned from management field and I have worked on numerous portfolio projects some of which are in the portfolio section,
-                    My expertise lies in both front-end and back-end development, allowing me to seamlessly integrate various technologies and deliver robust solutions.
-                    I am a quick learner, adaptable to new technologies, and always strive to stay up-to-date with the latest industry trends.
+                <h1  className=' font-bold hover:text-orange-400 border-b my-2 md:my-4 text-xl md:text-3xl text-center capitalize'>Who I am</h1>  
+              <div className=' my-2 md:my-4 tracking-wider md:leading-7 text-center flex flex-col gap-3 md:gap-4'>
+                   
+              <p> I am a highly skilled full-stack developer with a passion for creating efficient and user-friendly web applications.</p>
+              <p>I transitioned from management field to technology. The amazing capabilities of several software i interacted with in the course of my work as a management consultant piqued my interest in information technoloy.</p>
+              <p>I have worked on a number of portfolio projects some of which are in the portfolio section. My expertise lies in both front-end and back-end development, allowing me to seamlessly integrate various technologies and deliver robust solutions.</p>
+              <p>   I am a quick learner, adaptable to new technologies, and always strive to stay up-to-date with the latest industry trends.</p>
+              
+                 
 
-              </p>
+              </div>
               <h2  className='text-lg md:text-2xl font-bold my-2 md:my-4 border-b hover:text-orange-400 text-center mt-3 md:mt-5'>Skills</h2>
          <div className='flex flex-col md:flex-row gap-2'>
               <ul  className='flex-1 border p-3 rounded-lg leading-7 md:p-4 list-inside list-disc lg:hover:text-slate-700 lg:hover:bg-slate-200'>
@@ -87,13 +91,23 @@ function About() {
             {/* tablet and desktop */}
       
           <motion.div variants={slideLeft} initial='initial' whileInView='animate'  className='h-[100vh] text-slate-300 p-6 lg:w-[1066px] bg-mycolor m-auto hidden md:block'> 
-                <motion.h1 variants={slideLeft} className=' font-bold hover:text-orange-400 border-b my-2 md:my-4 text-xl md:text-3xl text-center capitalize'>About</motion.h1>  
-              <motion.p variants={slideLeft} className=' my-2 md:my-4 tracking-wider lg:leading-7 text-center'>
-                    I am a highly skilled full-stack developer with a passion for creating efficient and user-friendly web applications. I transitioned from management field, so I bring the problem solving skills I&apos;ve acquired over the years to bear on technology while working on projects. I have worked on numerous portfolio projects some of which are in the portfolio section.
-                    My expertise lies in both front-end and back-end development, allowing me to seamlessly integrate various technologies and deliver robust solutions.
-                    I am a quick learner, adaptable to new technologies, and always strive to stay up-to-date with the latest industry trends.
+                <motion.h1 variants={slideLeft} className=' font-bold hover:text-orange-400 border-b my-2 md:my-4 text-xl md:text-3xl text-center capitalize'>Who I Am</motion.h1>  
+              <motion.div variants={slideLeft} className=' my-2 md:my-4 tracking-wider lg:leading-7 text-center flex flex-col gap-3'>
+                
+                   
+              <p> I am a highly skilled full-stack developer with a passion for creating efficient and user-friendly web applications.</p>
+              <p>I transitioned from management field to technology. The amazing capabilities of several software I interacted with in the course of my work as a management consultant piqued my interest in information technoloy. </p>
+              <p>I have worked on a number of portfolio projects some of which are in the portfolio section. My expertise lies in both front-end and back-end development, allowing me to seamlessly integrate various technologies and deliver robust solutions.</p>
+              <p>   I am a quick learner, adaptable to new technologies, and always strive to stay up-to-date with the latest industry trends.</p>
+              
+                 
 
-              </motion.p>
+            
+            {/* I am a highly skilled full-stack developer with a passion for creating efficient and user-friendly web applications. I transitioned from management field, so I bring the problem solving skills I&apos;ve acquired over the years to bear on technology while working on projects. I have worked on numerous portfolio projects some of which are in the portfolio section.
+                    My expertise lies in both front-end and back-end development, allowing me to seamlessly integrate various technologies and deliver robust solutions.
+                    I am a quick learner, adaptable to new technologies, and always strive to stay up-to-date with the latest industry trends. */}
+
+              </motion.div>
               <motion.h2 variants={slideLeft} className='text-lg md:text-2xl font-bold my-2 md:my-4 border-b hover:text-orange-400 text-center mt-3 md:mt-5'>Skills</motion.h2>
          <motion.div className='flex flex-col md:flex-row gap-2'>
               <motion.ul variants={slideLeft} className='flex-1 border p-3 rounded-lg leading-7 md:p-4 list-inside list-disc lg:hover:text-slate-700 lg:hover:bg-slate-200'>
