@@ -75,7 +75,7 @@ function About() {
 
                 <ul  className='flex-1 border p-3 rounded-lg leading-7 md:p-4 list-inside list-disc lg:hover:text-slate-700 lg:hover:bg-slate-200'>
                   <li> <span className=' text-orange-400 font-bold'>Testing and Debugging</span>: Postman, Thunder Client </li>
-                  <li><span className=' text-orange-400 font-bold'> Agile Methodologies</span>: Scrum(theoretical knowledge)</li>
+                  <li><span className=' text-orange-400 font-bold'> Agile Methodologies</span>: Scrum</li>
               </ul>
                   
             </div>
